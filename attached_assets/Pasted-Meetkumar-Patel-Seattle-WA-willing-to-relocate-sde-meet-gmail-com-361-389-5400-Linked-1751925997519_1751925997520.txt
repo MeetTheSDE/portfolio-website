@@ -1,0 +1,59 @@
+Meetkumar Patel
+Seattle, WA (willing to relocate)
+📧 sde.meet@gmail.com | 📞 (361) 389-5400 | LinkedIn
+
+⸻
+
+🔹 SUMMARY
+
+Backend-focused software engineer with 3+ years of experience delivering scalable, secure systems using Java, Python, JavaScript, and relational databases. Specializes in secure API development, third-party integrations, and cloud-based deployment pipelines — with working knowledge of Kotlin, TypeScript, and React.
+
+⸻
+
+🔹 EXPERIENCE
+
+Software Developer – Omeda
+📍 Chicago, IL | 🗓️ Nov 2021 – Feb 2025
+	•	Integrated Stripe Payment Gateway using AWS Lambda for real-time billing & webhook handling.
+	•	Built access control and data management tools in Java/JAX-RS — reduced support tickets by 70%.
+	•	Secured APIs using JWT and RBAC, improving authorization and compliance.
+	•	Refactored legacy APIs to optimize payloads and added caching/pagination — boosted performance by 20%.
+	•	Created automated, real-time email campaigns tied to voyage events in their MA system (30% engagement gain).
+	•	Maintained CI/CD pipelines with Jenkins; wrote JUnit/TestNG test suites for all services.
+	•	Owned end-to-end documentation: APIs, test cases, bug reports, and troubleshooting guides.
+
+Software Developer – Sculptsoft
+📍 Ahmedabad, India | 🗓️ Jul 2018 – Mar 2019
+	•	Developed a full-featured real estate platform with Spring Boot and Hibernate.
+	•	Implemented live search and filtering with jQuery/AJAX.
+	•	Wrote 300+ unit tests with JUnit and TestNG.
+	•	Used GitHub for code management and peer-reviewed all changes.
+
+⸻
+
+🔹 EDUCATION
+	•	University of Texas, Arlington — MS in Computer Science | GPA: 3.9
+	•	Gujarat Technological University — BE in Computer Engineering | GPA: 3.7
+
+⸻
+
+🔹 PROJECTS
+
+Walk Safe
+	•	Python + Django app hosted on AWS EC2 that generates safe walking routes using crime data.
+	•	PostgreSQL + Redis backend, D3.js for data visualizations.
+
+Game Review Rating Predictor
+	•	Built a Flask-based app to predict game ratings using NLP (TF-IDF, tokenization, K-fold CV).
+	•	Achieved 90% accuracy across 13M+ user comments.
+
+⸻
+
+🔹 SKILLS
+
+Languages: Java (J2EE), Python, JavaScript, TypeScript
+Frameworks/Libraries: Spring Boot, Hibernate, Django, JAX-RS, JUnit, TestNG, OAuth 2.0, jQuery
+Web/API: REST, OpenAPI, Swagger, React
+Databases: MySQL, SQL Server, PostgreSQL, Cassandra, Redis, DynamoDB
+Cloud & DevOps: AWS (Lambda, EC2, S3), Docker, Jenkins, CI/CD, Maven, Tomcat
+Tools: Elasticsearch, Postman, Kibana, SonarQube, JIRA, IntelliJ, TDD, Agile (Scrum/Kanban)
