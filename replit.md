@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern, responsive personal portfolio website built as a full-stack application showcasing Meetkumar Patel's professional experience as a backend-focused software engineer. The application features a React frontend with a sophisticated design system and an Express.js backend for handling contact form submissions.
+This is a modern, responsive personal portfolio website built as a frontend-only React application showcasing Meetkumar Patel's professional experience as a backend-focused software engineer. The application features a clean, minimalist design with smooth animations and professional styling.
 
 ## System Architecture
 
@@ -15,13 +15,11 @@ This is a modern, responsive personal portfolio website built as a full-stack ap
 - **State Management**: TanStack React Query for server state management
 - **Build Tool**: Vite for fast development and optimized builds
 
-### Backend Architecture
-- **Runtime**: Node.js with Express.js framework
-- **Language**: TypeScript with ES modules
-- **API Design**: RESTful endpoints for contact form handling
-- **Database ORM**: Drizzle ORM configured for PostgreSQL
-- **Session Management**: Memory-based storage with fallback for database integration
-- **Validation**: Zod schemas for runtime type validation
+### Application Architecture
+- **Deployment**: Frontend-only static site application
+- **Build Tool**: Vite for fast development and optimized production builds
+- **Configuration**: Independent client-side configuration with proper path resolution
+- **Contact Form**: Demo functionality without backend dependencies
 
 ## Key Components
 
@@ -32,25 +30,23 @@ This is a modern, responsive personal portfolio website built as a full-stack ap
 - **Contact Form**: Interactive form with validation and submission handling
 - **UI System**: Comprehensive design system with reusable components
 
-### Backend Services
-- **Contact API**: `/api/contact` endpoint for form submissions
-- **Message Storage**: In-memory storage with database schema ready
-- **Error Handling**: Centralized error handling with proper HTTP status codes
-- **Request Logging**: Custom middleware for API request logging
-
-### Database Schema
-- **Users Table**: Ready for authentication implementation
-- **Contact Messages Table**: Stores form submissions with timestamps
-- **Schema Validation**: Drizzle-Zod integration for type-safe database operations
+### Portfolio Sections
+- **Hero Section**: Animated introduction with floating tech icons
+- **Summary Section**: Professional background and key achievements
+- **Interest Areas**: Cloud Architecture, Security & Compliance, Data Engineering
+- **Work Experience**: Detailed experience from Omeda and Sculptsoft
+- **Projects Section**: Featured projects with technology stacks
+- **Skills Section**: 12 core technologies with visual icons
+- **Education Section**: MS and BE degrees with GPAs
+- **Contact Section**: Interactive form with demo functionality
 
 ## Data Flow
 
-1. **User Interaction**: User navigates portfolio and fills contact form
-2. **Form Validation**: Client-side validation using React Hook Form with Zod resolvers
-3. **API Request**: Form data submitted to `/api/contact` endpoint
-4. **Backend Processing**: Express validates data and stores message
-5. **Response Handling**: Success/error feedback displayed via toast notifications
-6. **Admin Access**: `/api/contact-messages` endpoint for retrieving submissions
+1. **User Interaction**: User navigates portfolio sections with smooth scrolling
+2. **Form Interaction**: Contact form provides demo functionality with success feedback
+3. **Animations**: Framer Motion provides smooth animations and transitions
+4. **Responsive Design**: Tailwind CSS ensures perfect display across all devices
+5. **Static Deployment**: Built as static files for easy deployment to any hosting platform
 
 ## External Dependencies
 
@@ -63,12 +59,12 @@ This is a modern, responsive personal portfolio website built as a full-stack ap
 - **HTTP**: TanStack React Query for API communication
 - **Utilities**: clsx, class-variance-authority, date-fns
 
-### Backend Dependencies
-- **Server**: Express.js with TypeScript support
-- **Database**: Drizzle ORM, @neondatabase/serverless
-- **Validation**: Zod for schema validation
-- **Session**: connect-pg-simple for PostgreSQL sessions
-- **Development**: tsx for TypeScript execution, esbuild for production builds
+### Core Dependencies
+- **React**: React 18 with TypeScript for component development
+- **Vite**: Fast build tool and development server
+- **Styling**: Tailwind CSS for responsive design system
+- **Icons**: Lucide React for clean, consistent iconography
+- **Routing**: Wouter for lightweight client-side navigation
 
 ### Development Tools
 - **Build**: Vite with React plugin and runtime error overlay
@@ -79,28 +75,31 @@ This is a modern, responsive personal portfolio website built as a full-stack ap
 ## Deployment Strategy
 
 ### Development Mode
-- **Frontend**: Vite dev server with HMR at client root
-- **Backend**: tsx execution with nodemon-like behavior
-- **Database**: Neon serverless PostgreSQL for development
-- **Environment**: Replit-optimized with runtime error modal
+- **Frontend**: Vite dev server with HMR on port 5000
+- **Path Resolution**: Configured `@` alias for clean imports
+- **Hot Reload**: Instant updates during development
+- **TypeScript**: Strict type checking with proper configuration
 
 ### Production Build
-- **Frontend**: Vite builds to `dist/public` with optimized assets
-- **Backend**: esbuild bundles server to `dist/index.js` as ESM
-- **Static Serving**: Express serves built frontend files
-- **Database**: Production PostgreSQL via DATABASE_URL environment variable
+- **Static Site**: Vite builds to `client/dist` folder
+- **Optimized Assets**: Minified CSS/JS with tree shaking
+- **Deployment Ready**: Static files can be served from any web server
+- **Performance**: Optimized for fast loading and SEO
 
 ### Configuration Management
-- **Environment Variables**: DATABASE_URL for database connection
-- **Path Aliases**: TypeScript path mapping for clean imports
-- **Asset Handling**: Vite resolver for attached assets
-- **CORS**: Configured for development and production environments
+- **Path Aliases**: `@` alias points to `src` directory for clean imports
+- **TypeScript**: Separate tsconfig.json in client folder for proper resolution
+- **Tailwind**: Independent configuration with content path scanning
+- **Vite**: Custom configuration for development and production builds
 
 ## Changelog
 
 ```
 Changelog:
-- July 07, 2025. Initial setup
+- July 07, 2025: Initial setup with full-stack architecture
+- July 07, 2025: Converted to frontend-only React application per user request
+- July 07, 2025: Fixed Vite configuration and path resolution issues
+- July 07, 2025: Created independent client configuration for production builds
 ```
 
 ## User Preferences
