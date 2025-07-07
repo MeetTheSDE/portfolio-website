@@ -6,8 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 interface ContactFormData {
   name: string;
@@ -25,25 +23,7 @@ export default function ContactSection() {
     message: ""
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      return await apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I will get back to you soon.",
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Failed to send message",
-        description: error.message || "Please try again later.",
-        variant: "destructive",
-      });
-    },
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -59,7 +39,18 @@ export default function ContactSection() {
       });
       return;
     }
-    contactMutation.mutate(formData);
+    
+    setIsSubmitting(true);
+    
+    // Simulate form submission for portfolio demonstration
+    setTimeout(() => {
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I will get back to you soon.",
+      });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setIsSubmitting(false);
+    }, 1000);
   };
 
   const contactInfo = [
@@ -197,10 +188,10 @@ export default function ContactSection() {
               </div>
               <Button
                 type="submit"
-                disabled={contactMutation.isPending}
+                disabled={isSubmitting}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                {contactMutation.isPending ? (
+                {isSubmitting ? (
                   "Sending..."
                 ) : (
                   <>
