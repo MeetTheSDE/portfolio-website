@@ -11,40 +11,40 @@ import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 
 export default function Portfolio() {
-  useEffect(() => {
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+    useEffect(() => {
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+        };
 
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, observerOptions);
 
-    document.querySelectorAll('.section-fade').forEach(el => {
-      observer.observe(el);
-    });
+        document.querySelectorAll(".section-fade").forEach((el) => {
+            observer.observe(el);
+        });
 
-    return () => observer.disconnect();
-  }, []);
+        return () => observer.disconnect();
+    }, []);
 
-  return (
-    <div className="min-h-screen">
-      <Navigation />
-      <HeroSection />
-      <SummarySection />
-      <InterestsSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <EducationSection />
-      <ContactSection />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="min-h-screen">
+            <Navigation />
+            <HeroSection />
+            <SummarySection />
+            {/* <InterestsSection /> */}
+            <ExperienceSection />
+            <SkillsSection />
+            <ProjectsSection />
+            <EducationSection />
+            <ContactSection />
+            <Footer />
+        </div>
+    );
 }
