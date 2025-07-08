@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-    base: "/<your-repo-name>/", // 👈 replace this with your actual GitHub repo name
+    base: "/portfolio/",
     plugins: [react()],
     resolve: {
         alias: {
