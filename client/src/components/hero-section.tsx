@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Cloud, Zap, Database, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export default function HeroSection() {
     const handleScrollToContact = () => {

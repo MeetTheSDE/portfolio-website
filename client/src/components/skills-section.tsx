@@ -1,15 +1,4 @@
 import { motion } from "framer-motion";
-import {
-    Code,
-    Database,
-    GitBranch,
-    Zap,
-    Cloud,
-    Settings,
-    Search,
-    Server,
-    Smartphone,
-} from "lucide-react";
 
 export default function SkillsSection() {
     const skills = [
@@ -42,7 +31,7 @@ export default function SkillsSection() {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 section-fade cursor-pointer">
-                    {skills.map((skill, index) => {
+                    {skills.map((skill) => {
                         // const IconComponent = skill.icon ?? null;
                         return (
                             <motion.div

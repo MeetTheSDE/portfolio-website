@@ -1,6 +1,5 @@
-import exp from "constants";
 import { motion } from "framer-motion";
-import { CheckCircle, SquareArrowOutUpRight } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function ExperienceSection() {
@@ -115,7 +114,7 @@ export default function ExperienceSection() {
                 </div>
 
                 <div className="space-y-12 section-fade">
-                    {experiences.map((experience, index) => (
+                    {experiences.map((experience) => (
                         <motion.div
                             key={experience.company}
                             initial={{ opacity: 0, x: -50 }}

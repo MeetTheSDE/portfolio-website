@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import SummarySection from "@/components/summary-section";
-import InterestsSection from "@/components/interests-section";
 import ExperienceSection from "@/components/experience-section";
 import ProjectsSection from "@/components/projects-section";
 import SkillsSection from "@/components/skills-section";
@@ -38,7 +37,6 @@ export default function Portfolio() {
             <Navigation />
             <HeroSection />
             <SummarySection />
-            {/* <InterestsSection /> */}
             <ExperienceSection />
             <SkillsSection />
             <ProjectsSection />
